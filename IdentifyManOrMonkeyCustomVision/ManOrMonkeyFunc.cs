@@ -20,18 +20,18 @@ namespace IdentifyManOrMonkeyCustomVision
     public static class ManOrMonkeyFunc
     {
 
-        private static string trainingEndpoint = "https://eastus.api.cognitive.microsoft.com/";
-        private static string trainingKey = "5a12edb8904048d6904dc8384af8730d";
+        private static string trainingEndpoint = "enter correct end point from azure portal";
+        private static string trainingKey = "enter correct key from azure portal";
 
-        private static string predictionEndpoint = "https://eastus.api.cognitive.microsoft.com/";
-        private static string predictionKey = "5a12edb8904048d6904dc8384af8730d";
+        private static string predictionEndpoint = "enter correct end point from azure portal";
+        private static string predictionKey = "enter correct key from azure portal";
 
 
         private static string publishedModelName = "Iteration1";
 
-        private static string StorageAccountURIWithConatinerName = "https://deafaid.blob.core.windows.net/manormonkey/";
+        private static string StorageAccountURIWithConatinerName = "enter correct storage account uri with container name";
 
-        private static string ProjectGUID = "0b122e5a-03c6-4f27-a21e-66f3e2572d3b";
+        private static string ProjectGUID = "enter correct project guid from custom vision portal";
 
         private static string ManTagname = "man";
 
@@ -48,7 +48,7 @@ namespace IdentifyManOrMonkeyCustomVision
         static ManorMonkeyDeatails CurrentManorMonkeyDeatails;
 
 
-        static CloudStorageAccount storageAccount = CloudStorageAccount.Parse("DefaultEndpointsProtocol=https;AccountName=deafaid;AccountKey=ch8fbsZmxgSbFGfLw5lGNXgGlRUBN+Actts2M09bIUgomisMHySQv7xuiVDbj5k//BwpVF7V6TMGniOkhFn17Q==;EndpointSuffix=core.windows.net");
+        static CloudStorageAccount storageAccount = CloudStorageAccount.Parse("Please enter correct connection string from azure portal");
 
         static CloudTableClient tableClient = storageAccount.CreateCloudTableClient();
 
@@ -173,25 +173,6 @@ namespace IdentifyManOrMonkeyCustomVision
             }
         }
 
-
-        //public async Task UpdateSoundPlayingStatustoAzureTable(string command)
-        //{
-        //    if (manorMonkeyDeatails == null)
-        //    {
-        //        await GetCurrentSoundPlayingStatusAsync().ConfigureAwait(false);
-        //    }
-
-        //    manorMonkeyDeatails.SoundPlayingStatus = command;
-
-        //    manorMonkeyDeatails.IncidentTime = DateTime.Now;
-
-        //    TableOperation updateoperation = TableOperation.Replace(manorMonkeyDeatails);
-
-        //    var insertoperationresult = await _linkTable.ExecuteAsync(updateoperation);
-
-        //    CurrentSoundPlayingStatus = command;
-
-        //}
 
         private static CustomVisionTrainingClient AuthTraining(string endpoint, string trainingKey)
         {

@@ -16,7 +16,7 @@ namespace ProtectFarm.ViewModels
 
 
         //please enter correct values from azure portal
-        internal static CloudStorageAccount storageAccount = CloudStorageAccount.Parse("DefaultEndpointsProtocol=https;AccountName=deafaid;AccountKey=ch8fbsZmxgSbFGfLw5lGNXgGlRUBN+Actts2M09bIUgomisMHySQv7xuiVDbj5k//BwpVF7V6TMGniOkhFn17Q==;EndpointSuffix=core.windows.net");
+        internal static CloudStorageAccount storageAccount = CloudStorageAccount.Parse("please enter correct values from azure portal");
 
         internal static CloudTableClient tableClient = storageAccount.CreateCloudTableClient();
 
